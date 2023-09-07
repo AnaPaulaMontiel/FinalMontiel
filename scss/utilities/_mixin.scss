@@ -1,0 +1,16 @@
+@mixin bordes ($border-style, $border-radius, $border-color){
+    border-style: $border-style;
+    border-radius: $border-radius;
+    border-color: $border-color;
+}
+
+@mixin bordes-outline($outline-color, $outline-style, $outline-width){
+    outline-color: $outline-color;
+    outline-style: $outline-style;
+    outline-width: $outline-width;
+}
+
+@mixin grid-column-row($grid-column, $grid-row){
+    grid-column: $grid-column;
+    grid-row: $grid-row;
+}

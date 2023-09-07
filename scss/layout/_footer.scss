@@ -1,0 +1,28 @@
+.footer {
+    background-color: $rosa-color;
+    padding: 20px 0;
+    text-align: center;
+    color: $claro-color;
+  
+    .contenido-footer {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .texto-footer {
+      text-align: center;
+    }
+    .nav-footer {
+      li {
+        list-style-type: none;
+        a {
+          &.twitter,
+          &.instagram {
+            color: $claro-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  

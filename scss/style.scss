@@ -1,0 +1,123 @@
+@import "utilities/variables";
+@import "base/reset";
+@import "utilities/mixin";
+@import "utilities/extend";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/main";
+@import "components/gallery";
+@import "layout/global";
+
+
+
+.grid-container-inicio {
+  @include bordes(dotted, 30px, $blue-dos-color);
+  @include bordes-outline($rosa-color, dotted, 8px);
+  padding: 30px;
+  border-width: 5px;
+  padding-top: 30px;
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 40rem 1fr ;
+  grid-template-rows: auto 1fr auto ;
+  gap: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  
+  .grid-item-inicio-1 {
+      grid-column: 1/3;
+
+    .logo-inicio {
+      background-color: $rosa-color;
+      padding-bottom: 20px;
+      text-align: center;
+      border-radius: 20px;
+      color: $blue-dos-color;
+      text-shadow: 2px 1px $verde-dos-color;
+      font-size: 50px;
+    }
+  }
+  
+  .grid-item-inicio-2 {
+    padding: 40px;
+    display: flex;
+    @include grid-column-row(1, 2);
+    flex-direction: column;
+    justify-content: center ;
+    img.emote-inicio {
+      margin: 10px auto;
+      justify-content: center;
+      align-items: center;
+      max-width: 150px;
+      height: 150px;
+      background-color: $rosa-dos-color;
+      border: 10px solid $verde-dos-color;
+      border-radius: 20px;
+    }
+  
+    nav.nav-inicio {
+      @include bordes(dashed, 30px, $blue-dos-color);
+      background-color: $rosa-dos-color;
+      font-size: 30px;
+      text-align: center;
+      ul {
+          list-style-type: none;
+          li {
+            a {
+              text-decoration: none;
+              color: $primary-color;
+              text-shadow: 2px 2px rgb(249, 248, 255);
+            }
+          }
+        }
+      }
+    }
+  
+  .grid-item-inicio-3 {
+    @include grid-column-row(2, 2/3);
+    img.imagen-inicio {
+      max-width: 100%;
+      margin-left: 0px;
+      float: right;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container-inicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    margin: 10px;
+    padding: 10px;
+
+    .grid-item-inicio-1 {
+      @include grid-column-row(1, 1);
+    }
+  
+    .grid-item-inicio-2 {
+      @include grid-column-row(1, 2);
+
+    }
+  
+    .grid-item-inicio-3 {
+      @include grid-column-row(1, 3);
+    }
+  }
+
+  .contenedor-solicitud{
+    .tituloPaginas{
+      font-size: 20px;
+      margin: 10px;
+    }
+  }
+
+
+  .wide {
+    grid-column: span 2;
+  }
+
+  .tall {
+    grid-row: span 2;
+  }
+}
+

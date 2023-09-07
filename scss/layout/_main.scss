@@ -1,0 +1,198 @@
+/* INDEX */
+
+.grid-container-inicio {
+  @include bordes(dotted, 30px, $blue-dos-color);
+  @include bordes-outline($rosa-color, dotted, 8px);
+  padding: 30px;
+  border-width: 5px;
+  padding-top: 30px;
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 40rem 1fr ;
+  grid-template-rows: auto 1fr auto ;
+  gap: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  
+  .grid-item-inicio-1 {
+      grid-column: 1/3;
+
+    .logo-inicio {
+      background-color: $rosa-color;
+      padding-bottom: 20px;
+      text-align: center;
+      border-radius: 20px;
+      color: $blue-dos-color;
+      text-shadow: 2px 1px $verde-dos-color;
+      font-size: 50px;
+    }
+  }
+  
+  .grid-item-inicio-2 {
+    padding: 40px;
+    display: flex;
+    @include grid-column-row(1, 2);
+    flex-direction: column;
+    justify-content: center ;
+    img.emote-inicio {
+      margin: 10px auto;
+      justify-content: center;
+      align-items: center;
+      max-width: 150px;
+      height: 150px;
+      background-color: $rosa-dos-color;
+      border: 10px solid $verde-dos-color;
+      border-radius: 20px;
+    }
+  
+    nav.nav-inicio {
+      @include bordes(dashed, 30px, $blue-dos-color);
+      background-color: $rosa-dos-color;
+      font-size: 30px;
+      text-align: center;
+      ul {
+          list-style-type: none;
+          li {
+            a {
+              text-decoration: none;
+              color: $primary-color;
+              text-shadow: 2px 2px rgb(249, 248, 255);
+            }
+          }
+        }
+      }
+    }
+  
+  .grid-item-inicio-3 {
+    @include grid-column-row(2, 2/3);
+    img.imagen-inicio {
+      max-width: 100%;
+      margin-left: 0px;
+      float: right;
+    }
+  }
+}
+
+/* ABOUT ME */
+
+.sobre-mi {
+    display: flex;
+    align-items: center;
+  
+    .info-sobre-mi {
+      padding: 30px;
+  
+      .imagen-container {
+        padding: 20px;
+        
+        .aboutMeImg {
+          max-width: 100%;
+          height: auto;
+          border-radius: 30px;
+        }
+      }
+  
+      .textos {
+        color: $primary-color;
+        font-size: 25px;
+      }
+  
+      .tituloPaginas {
+        font-size: 30px;
+        margin: 20px;
+        text-align: center;
+        color: $titulos-color;
+      }
+    }
+}
+
+/* COMMISSIONS */
+
+main {
+    div {
+        .tituloPaginas {
+            font-size: 30px;
+            margin: 20px;
+            text-align: center;
+            color: $titulos-color;
+         }
+  
+      .caja-comis {
+            @include bordes(dotted, 30px, $claro-color);
+            background-color: $blue-color;
+            padding: 20px;
+            color: $claro-color;
+            margin: 40px;
+            font-size: 20px;
+        }
+    }
+}
+
+/* Solicitude */
+
+main {
+  .tituloPaginas {
+    font-size: 30px;
+    margin: 20px;
+    text-align: center;
+    color: $primary-color;
+  }
+  
+  .formulario {
+    @extend %formulario-style;
+  
+    form {
+    display: grid;
+    gap: 10px;
+  
+    label {
+    font-weight: bold;
+    color: $claro-color;
+    }
+  
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        @extend %textarea-styles;
+      }
+  
+      button[type="submit"] {
+        @extend %button-styles;
+      }
+    }
+  }
+}
+
+/* TERMS */
+
+main {
+    .tituloPaginas {
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+    .caja-terms {
+      background-color: rgb(231, 210, 223);
+      padding: 10px;
+      border-radius: 30px;
+      color: $primary-color;
+      margin: 20px;
+  
+      .terms-todos {
+        font-size: 20px;
+      }
+    }
+  
+    .caja-do {
+      background-color: rgb(207, 229, 255);
+      padding: 50px;
+      border-radius: 30px;
+      color: $primary-color;
+      margin: 40px;
+  
+      .do-dont {
+        font-size: 20px;
+        color: $primary-color;
+      }
+    }
+}

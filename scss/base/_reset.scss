@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cambiar la configuracion de raiz */
+
+/* Por defecto
+1 rem == 16px */
+
+html{
+    font-size: 62.5%;
+}
+/* Ahora 1 rem == 10px */
