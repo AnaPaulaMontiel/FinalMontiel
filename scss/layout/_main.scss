@@ -19,7 +19,6 @@
 
     .logo-inicio {
       background-color: $rosa-color;
-      padding-bottom: 20px;
       text-align: center;
       border-radius: 20px;
       color: $blue-dos-color;
@@ -76,57 +75,86 @@
 /* ABOUT ME */
 
 .sobre-mi {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+  .info-sobre-mi {
+    padding: 30px;
     display: flex;
-    align-items: center;
-  
-    .info-sobre-mi {
-      padding: 30px;
-  
-      .imagen-container {
-        padding: 20px;
-        
-        .aboutMeImg {
-          max-width: 100%;
-          height: auto;
-          border-radius: 30px;
-        }
-      }
-  
-      .textos {
-        color: $primary-color;
-        font-size: 25px;
-      }
-  
-      .tituloPaginas {
-        font-size: 30px;
-        margin: 20px;
-        text-align: center;
-        color: $titulos-color;
+    flex-direction: column;
+
+    .imagen-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .aboutMeImg {
+        max-width: 100%;
+        height: auto;
+        border-radius: 30px;
       }
     }
+
+    .textos {
+      color: $primary-color;
+      font-size: 25px;
+      margin-top: 20px;
+
+    }
+
+    .tituloPaginas {
+      font-size: 30px;
+      text-align: center;
+      color: $titulos-color;
+    }
+  }
 }
+
 
 /* COMMISSIONS */
 
 main {
-    div {
-        .tituloPaginas {
-            font-size: 30px;
-            margin: 20px;
-            text-align: center;
-            color: $titulos-color;
-         }
-  
-      .caja-comis {
-            @include bordes(dotted, 30px, $claro-color);
-            background-color: $blue-color;
-            padding: 20px;
-            color: $claro-color;
-            margin: 40px;
-            font-size: 20px;
-        }
+  div {
+    .tituloPaginas {
+      font-size: 30px;
+      margin: 20px;
+      text-align: center;
+      color: $titulos-color;
     }
+
+    .caja-comis {
+      @include bordes(dotted, 30px, $claro-color);
+      background-color: $blue-color;
+      padding: 20px;
+      color: $claro-color;
+      margin: 40px;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contenido {
+      flex: 1;
+    }
+
+    .imagen-comis-hor {
+      max-width: 28%;
+      margin: 20px;
+      margin-left: 30%;
+      border-radius: 30px;
+    }
+    .imagen-comis-ver {
+      max-width: 50%;
+      border-radius: 30px;
+    }
+  }
 }
+
+
+
+
 
 /* Solicitude */
 
@@ -142,13 +170,13 @@ main {
     @extend %formulario-style;
   
     form {
-    display: grid;
-    gap: 10px;
+      display: grid;
+      gap: 10px;
   
-    label {
-    font-weight: bold;
-    color: $claro-color;
-    }
+      label {
+        font-weight: bold;
+        color: $claro-color;
+      }
   
       input[type="text"],
       input[type="email"],
@@ -161,7 +189,23 @@ main {
       }
     }
   }
+  
+  .texto-intro {
+
+    @include bordes(dotted, 30px, $verde-color);
+    border-width: 5px;
+    margin: 50px;
+    margin-top: 20px;
+    text-align: center;
+    color: $primary-color;
+    
+    p {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
 }
+
 
 /* TERMS */
 
